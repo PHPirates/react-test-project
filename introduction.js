@@ -90,7 +90,7 @@ SecondPrototype.prototype.timesTwo = function () {
 };
 
 const protoTwo = new SecondPrototype(21);
-// console.log(protoTwo.timesTwo());
+// console.log(protoTwo.timesTwo()); // 42
 
 
 function parentFunc() {
