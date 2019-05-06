@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// https://reactjs.org/docs/hello-world.html
+
 // React element
 const element = <h1>Hello, world!</h1>;
 
