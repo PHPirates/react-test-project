@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 // https://reactjs.org/docs/hello-world.html
@@ -112,3 +112,30 @@ class LoggingButton extends React.Component {
 
 render(<LoggingButton />);
 
+class WhatIsThis extends Component {
+    data = {
+        some: 'data'
+    }
+
+    renderObject (object) {
+        return Object.keys(object).map((obj) => {
+            return (
+              <div key={obj}>
+                  key: {obj}; <br/>
+                  value: {object[obj]} <br/><br/>
+              </div>
+            )
+        })
+    }
+
+    render() {
+        console.log('this is: ', this)
+        return (
+          <div> This is an object: <br />
+              { this.renderObject(this.data) }
+          </div>
+        )
+    }
+}
+
+render(<WhatIsThis />);
